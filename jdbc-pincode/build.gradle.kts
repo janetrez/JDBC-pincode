@@ -35,7 +35,7 @@ application {
     mainClass.set("com.jdbc.ApplicationKt")
 }
 java {
-    sourceCompatibility = JavaVersion.toVersion("19")
+    sourceCompatibility = JavaVersion.toVersion("21")
 }
 
 
