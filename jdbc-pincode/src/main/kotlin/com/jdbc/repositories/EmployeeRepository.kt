@@ -16,4 +16,10 @@ class EmployeeRepository {
         return pinCode
     }
 
+    fun updateCity(pinCode: Int, name: String) {
+        val connection = DatabaseConnection().connectDatabase()
+        val query = connection?.prepareStatement("UPDATE employee SET city='$name' where pincode = $pinCode")
+        query?.executeUpdate()
+    }
+
 }

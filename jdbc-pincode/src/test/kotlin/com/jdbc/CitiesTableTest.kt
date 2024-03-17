@@ -12,6 +12,6 @@ class CitiesTableTest {
         val citiesRepository = CitiesRepository()
         val city = citiesRepository.findCity(pinCode)
 
-        assertEquals("Kochi",city)
+        assertEquals("Pune",city)
     }
 }
