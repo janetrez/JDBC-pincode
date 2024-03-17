@@ -1,12 +1,13 @@
 package com.jdbc.setup
 
+import java.sql.Connection
 import java.sql.DriverManager
 
 class DatabaseConnection {
 
-    fun connectDatabase() :Boolean{
+    fun connectDatabase(): Connection? {
         val url = "jdbc:postgresql://localhost:5432/jdbc"
         val connection = DriverManager.getConnection(url)
-        return connection.isValid(0)
+        return connection
     }
 }

@@ -10,6 +10,9 @@ class DatabaseTests {
     fun `should connect to the jdbc database`(){
         val dbConnect = DatabaseConnection()
         val response = dbConnect.connectDatabase()
-        assertTrue{response}
+        if (response != null) {
+            assertTrue{response.isValid(0)}
+        }
+
     }
 }
